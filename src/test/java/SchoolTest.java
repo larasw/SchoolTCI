@@ -70,4 +70,17 @@ public class SchoolTest {
         // assert
         Assert.assertEquals("Course with the same name has successfully been added",1, courseAdded);
     }
+
+    @Test
+    public void getCourseByCourseName() throws ParseException, CourseException {
+        // arrange
+        School school = new School();
+
+        // act
+        school.addCourse("Math", "01-01-2018", "31-12-2018");
+        Course course = school.getCourseByName("Math");
+
+        // assert
+        Assert.assertNotNull("Cannot take course by its name", course);
+    }
 }

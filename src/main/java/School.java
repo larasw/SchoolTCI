@@ -46,6 +46,11 @@ public class School {
         throw new CourseException("End Date should be After Start Date");
     }
 
+
+    public Course getCourseByName(String courseName) {
+        return null;
+    }
+
     public int totalCourses(){
         return courseList.size();
     }
