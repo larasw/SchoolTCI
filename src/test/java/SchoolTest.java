@@ -96,8 +96,9 @@ public class SchoolTest {
         school.addCourse("Biology", "01-01-2018", "31-12-2018");
 
         String[] courseNames = school.getCourseNames();
+        int total = school.totalCourses();
 
         // assert
-        Assert.assertNotNull("Cannot take list of course names", courseNames);
+        Assert.assertEquals("Cannot take list of course names", total, courseNames.length);
     }
 }

@@ -59,11 +59,8 @@ public class School {
         String[] courseNames = new String[totalCourses()];
         for(int i = 0; i<totalCourses(); i++){
             courseNames[i] = courseList.get(i).getName();
-            if(i == totalCourses() - 1){
-                return courseNames;
-            }
         }
-        return null;
+        return courseNames;
     }
 
     public int totalCourses(){
