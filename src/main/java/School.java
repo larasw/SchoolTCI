@@ -18,21 +18,12 @@ public class School {
 
     public void addCourse(String name, String startDate, String endDate)
             throws ParseException, CourseException {
-
-        Date start = DATE_FORMAT.parse(startDate);
-        Date end = DATE_FORMAT.parse(endDate);
-
-        if(checkUniqueName(name)) {
-            if (end.compareTo(start) > 0) {
-                Course course = new Course();
-                course.setName(name);
-                course.setStartDate(startDate);
-                course.setEndDate(endDate);
-
-                courseList.add(course);
-            } else {
-                throw new CourseException("End Date should be After Start Date");
-            }
+        if(checkUniqueName(name) && checkCourseEndDate(startDate, endDate)) {
+            Course course = new Course();
+            course.setName(name);
+            course.setStartDate(startDate);
+            course.setEndDate(endDate);
+            courseList.add(course);
         }
     }
 
@@ -43,6 +34,16 @@ public class School {
             }
         }
         return true;
+    }
+
+    private boolean checkCourseEndDate(String startDate, String endDate)
+            throws ParseException, CourseException {
+        Date start = DATE_FORMAT.parse(startDate);
+        Date end = DATE_FORMAT.parse(endDate);
+        if (end.compareTo(start) > 0) {
+            return true;
+        }
+        throw new CourseException("End Date should be After Start Date");
     }
 
     public int totalCourses(){
