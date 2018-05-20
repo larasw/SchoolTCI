@@ -56,4 +56,18 @@ public class SchoolTest {
         // assert
         Assert.assertEquals("course with end date before start date success to add",0, courseAdded);
     }
+
+    @Test
+    public void nameOfTheCOurseMustBeUnique() throws ParseException, CourseException {
+        // arrange
+        School school = new School();
+
+        // act
+        school.addCourse("Math", "01-01-2018", "31-12-2018");
+        school.addCourse("Math", "01-07-2018", "31-12-2018");
+        int courseAdded = school.totalCourses();
+
+        // assert
+        Assert.assertEquals("Course with the same name has successfully been added",1, courseAdded);
+    }
 }

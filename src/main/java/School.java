@@ -21,7 +21,7 @@ public class School {
 
         Date start = DATE_FORMAT.parse(startDate);
         Date end = DATE_FORMAT.parse(endDate);
-        
+
         if(end.compareTo(start) > 0){
             Course course = new Course();
             course.setName(name);
