@@ -1,8 +1,11 @@
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 
 public class School {
     private String name;
+    private SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("dd-MM-yyyy");
     private Date date;
     private ArrayList<Course> courseList;
 
@@ -15,14 +18,22 @@ public class School {
     }
 
     public void setName(String name) {
-        this.name = name;
+        if(name != null){
+            this.name = name;
+        } else {
+            this.setName("Fontys University");
+        }
     }
 
     public Date getDate() {
         return date;
     }
 
-    public void setDate(Date date) {
-        this.date = date;
+    public void setDate(String date) throws ParseException {
+        if(date != null){
+            this.date = DATE_FORMAT.parse(String.valueOf(date));
+        } else {
+            this.setDate("01-01-2018");
+        }
     }
 }

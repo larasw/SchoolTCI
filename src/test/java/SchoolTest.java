@@ -1,6 +1,7 @@
 import org.junit.Assert;
 import org.junit.Test;
 
+import java.text.ParseException;
 import java.util.Date;
 
 public class SchoolTest {
@@ -18,7 +19,7 @@ public class SchoolTest {
     }
 
     @Test
-    public void schoolDateNotNull() {
+    public void schoolDateNotNull() throws ParseException {
         // arrange
         School school = new School();
 
