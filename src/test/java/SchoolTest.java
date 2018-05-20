@@ -37,10 +37,23 @@ public class SchoolTest {
         School school = new School();
 
         // act
-        school.addCourse("Math", "01-01-2018", "01-01-2018");
+        school.addCourse("Math", "01-01-2018", "02-01-2018");
         int courseAdded = school.totalCourses();
 
         // assert
         Assert.assertEquals("course failed to add",1, courseAdded);
+    }
+
+    @Test
+    public void courseEndDateSetAfterBeginDate() throws ParseException {
+        // arrange
+        School school = new School();
+
+        // act
+        school.addCourse("Math", "01-01-2018", "31-12-2017");
+        int courseAdded = school.totalCourses();
+
+        // assert
+        Assert.assertEquals("course with end date before start date success to add",0, courseAdded);
     }
 }
