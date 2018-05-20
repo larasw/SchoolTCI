@@ -16,8 +16,8 @@ public class School {
         courseList = new ArrayList<>();
     }
 
-    public boolean addCourse(String name, String startDate, String endDate){
-        return false;
+    public void addCourse(String name, String startDate, String endDate) throws ParseException {
+
     }
 
     public String getName() {
@@ -38,5 +38,9 @@ public class School {
         if(date != null){
             this.date = DATE_FORMAT.parse(String.valueOf(date));
         }
+    }
+
+    public ArrayList<Course> getCourseList() {
+        return courseList;
     }
 }

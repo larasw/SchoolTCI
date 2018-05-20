@@ -37,9 +37,10 @@ public class SchoolTest {
         School school = new School();
 
         // act
-        boolean courseAdded = school.addCourse("Math", "01-01-2018", "01-01-2018");
+        school.addCourse("Math", "01-01-2018", "01-01-2018");
+        int courseAdded = school.getCourseList().size();
 
         // assert
-        Assert.assertTrue("course failed to add", courseAdded);
+        Assert.assertEquals("course failed to add",1, courseAdded);
     }
 }
