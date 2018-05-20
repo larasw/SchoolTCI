@@ -31,5 +31,15 @@ public class SchoolTest {
         Assert.assertNotNull("School Date is null", schoolDate);
     }
 
+    @Test
+    public void oneCourseAddedToSchool() throws ParseException {
+        // arrange
+        School school = new School();
 
+        // act
+        boolean courseAdded = school.addCourse("Math", "01-01-2018", "01-01-2018");
+
+        // assert
+        Assert.assertTrue("course failed to add", courseAdded);
+    }
 }

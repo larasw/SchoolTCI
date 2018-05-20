@@ -16,6 +16,10 @@ public class School {
         courseList = new ArrayList<>();
     }
 
+    public boolean addCourse(String name, String startDate, String endDate){
+        return false;
+    }
+
     public String getName() {
         return name;
     }
