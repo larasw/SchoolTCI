@@ -2,6 +2,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import java.text.ParseException;
+import java.util.ArrayList;
 import java.util.Date;
 
 public class SchoolTest {
@@ -84,5 +85,15 @@ public class SchoolTest {
         Assert.assertNotNull("Cannot take course by its name", course);
     }
 
-    
+    @Test
+    public void listOfCourseNames() throws ParseException {
+        // arrange
+        School school = new School();
+
+        // act
+        String[] courseNames = school.getCourseNames();
+
+        // assert
+        Assert.assertNotNull("Cannot take list of course names", courseNames);
+    }
 }

@@ -55,6 +55,11 @@ public class School {
         return null;
     }
 
+    public String[] getCourseNames() {
+
+        return null;
+    }
+
     public int totalCourses(){
         return courseList.size();
     }
@@ -78,4 +83,6 @@ public class School {
             this.date = DATE_FORMAT.parse(String.valueOf(date));
         }
     }
+
+
 }
