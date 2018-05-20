@@ -22,16 +22,27 @@ public class School {
         Date start = DATE_FORMAT.parse(startDate);
         Date end = DATE_FORMAT.parse(endDate);
 
-        if(end.compareTo(start) > 0){
-            Course course = new Course();
-            course.setName(name);
-            course.setStartDate(startDate);
-            course.setEndDate(endDate);
+        if(checkUniqueName(name)) {
+            if (end.compareTo(start) > 0) {
+                Course course = new Course();
+                course.setName(name);
+                course.setStartDate(startDate);
+                course.setEndDate(endDate);
 
-            courseList.add(course);
-        } else {
-            throw new CourseException("End Date should be After Start Date");
+                courseList.add(course);
+            } else {
+                throw new CourseException("End Date should be After Start Date");
+            }
         }
+    }
+
+    private boolean checkUniqueName(String name){
+        for(int i = 0; i < totalCourses(); i++){
+            if(name.equals(courseList.get(i).getName())){
+                return false;
+            }
+        }
+        return true;
     }
 
     public int totalCourses(){

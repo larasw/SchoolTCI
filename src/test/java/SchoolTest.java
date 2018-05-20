@@ -58,7 +58,7 @@ public class SchoolTest {
     }
 
     @Test
-    public void nameOfTheCOurseMustBeUnique() throws ParseException, CourseException {
+    public void nameOfTheCourseMustBeUnique() throws ParseException, CourseException {
         // arrange
         School school = new School();
 
