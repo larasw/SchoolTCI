@@ -6,7 +6,7 @@ import java.util.Date;
 
 public class CourseTest {
     @Test
-    public void courseNameCannotBeNull() {
+    public void courseNameCannotBeNull() throws ParseException {
         // arrange
         Course course = new Course();
 

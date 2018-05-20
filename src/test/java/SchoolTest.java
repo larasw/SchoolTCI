@@ -6,7 +6,7 @@ import java.util.Date;
 
 public class SchoolTest {
     @Test
-    public void schoolNameNotNull() {
+    public void schoolNameNotNull() throws ParseException {
         // arrange
         School school = new School();
 

@@ -6,9 +6,12 @@ public class Course {
     private String name;
     private Date startDate, endDate;
 
-    private SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("dd-MM-yyyy");
+    private final SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("dd-MM-yyyy");
 
-    public Course() {
+    public Course() throws ParseException {
+        this.name = "Nameless course";
+        this.startDate = DATE_FORMAT.parse("01-01-2018");
+        this.endDate = DATE_FORMAT.parse("01-01-2018");
     }
 
     public String getName() {
@@ -18,8 +21,6 @@ public class Course {
     public void setName(String name) {
         if(name != null){
             this.name = name;
-        } else {
-            this.setName("Nameless course");
         }
     }
 
@@ -30,8 +31,6 @@ public class Course {
     public void setStartDate(String startDate) throws ParseException {
         if(startDate != null) {
             this.startDate = DATE_FORMAT.parse(startDate);
-        } else {
-            this.setStartDate("01-01-2018");
         }
     }
 
@@ -42,8 +41,6 @@ public class Course {
     public void setEndDate(String endDate) throws ParseException {
         if(endDate != null) {
             this.endDate = DATE_FORMAT.parse(endDate);
-        } else {
-            this.setEndDate("01-01-2018");
         }
     }
 }
