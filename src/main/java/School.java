@@ -16,13 +16,19 @@ public class School {
         courseList = new ArrayList<>();
     }
 
-    public void addCourse(String name, String startDate, String endDate) throws ParseException {
-        Course course = new Course();
-        course.setName(name);
-        course.setStartDate(startDate);
-        course.setEndDate(endDate);
+    public void addCourse(String name, String startDate, String endDate) throws ParseException, CourseException {
+        Date start = DATE_FORMAT.parse(startDate);
+        Date end = DATE_FORMAT.parse(endDate);
+        if(end.compareTo(start) > 0){
+            Course course = new Course();
+            course.setName(name);
+            course.setStartDate(startDate);
+            course.setEndDate(endDate);
 
-        courseList.add(course);
+            courseList.add(course);
+        } else {
+            throw new CourseException("End Date should be After Start Date");
+        }
     }
 
     public int totalCourses(){

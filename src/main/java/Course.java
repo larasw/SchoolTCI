@@ -11,7 +11,7 @@ public class Course {
     public Course() throws ParseException {
         this.name = "Nameless course";
         this.startDate = DATE_FORMAT.parse("01-01-2018");
-        this.endDate = DATE_FORMAT.parse("01-01-2018");
+        this.endDate = DATE_FORMAT.parse("02-01-2018");
     }
 
     public String getName() {

@@ -32,7 +32,7 @@ public class SchoolTest {
     }
 
     @Test
-    public void oneCourseAddedToSchool() throws ParseException {
+    public void oneCourseAddedToSchool() throws ParseException, CourseException {
         // arrange
         School school = new School();
 
@@ -44,8 +44,8 @@ public class SchoolTest {
         Assert.assertEquals("course failed to add",1, courseAdded);
     }
 
-    @Test
-    public void courseEndDateSetAfterBeginDate() throws ParseException {
+    @Test(expected = CourseException.class)
+    public void courseEndDateSetAfterBeginDate() throws ParseException, CourseException {
         // arrange
         School school = new School();
 
