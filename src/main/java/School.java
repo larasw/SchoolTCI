@@ -48,6 +48,11 @@ public class School {
 
 
     public Course getCourseByName(String courseName) {
+        for(int i = 0; i<totalCourses(); i++){
+            if(courseName.equals(courseList.get(i).getName())){
+                return courseList.get(i);
+            }
+        }
         return null;
     }
 
