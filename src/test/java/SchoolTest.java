@@ -86,11 +86,15 @@ public class SchoolTest {
     }
 
     @Test
-    public void listOfCourseNames() throws ParseException {
+    public void listOfCourseNames() throws ParseException, CourseException {
         // arrange
         School school = new School();
 
         // act
+        school.addCourse("Math", "01-01-2018", "31-12-2018");
+        school.addCourse("Science", "01-01-2018", "31-12-2018");
+        school.addCourse("Biology", "01-01-2018", "31-12-2018");
+
         String[] courseNames = school.getCourseNames();
 
         // assert
