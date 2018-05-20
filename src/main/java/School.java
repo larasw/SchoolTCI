@@ -25,6 +25,10 @@ public class School {
         courseList.add(course);
     }
 
+    public int totalCourses(){
+        return courseList.size();
+    }
+
     public String getName() {
         return name;
     }
@@ -43,9 +47,5 @@ public class School {
         if(date != null){
             this.date = DATE_FORMAT.parse(String.valueOf(date));
         }
-    }
-
-    public ArrayList<Course> getCourseList() {
-        return courseList;
     }
 }

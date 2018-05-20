@@ -38,7 +38,7 @@ public class SchoolTest {
 
         // act
         school.addCourse("Math", "01-01-2018", "01-01-2018");
-        int courseAdded = school.getCourseList().size();
+        int courseAdded = school.totalCourses();
 
         // assert
         Assert.assertEquals("course failed to add",1, courseAdded);
