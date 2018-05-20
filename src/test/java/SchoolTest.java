@@ -83,4 +83,6 @@ public class SchoolTest {
         // assert
         Assert.assertNotNull("Cannot take course by its name", course);
     }
+
+    
 }

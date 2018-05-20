@@ -46,7 +46,6 @@ public class School {
         throw new CourseException("End Date should be After Start Date");
     }
 
-
     public Course getCourseByName(String courseName) {
         for(int i = 0; i<totalCourses(); i++){
             if(courseName.equals(courseList.get(i).getName())){
