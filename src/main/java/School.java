@@ -17,7 +17,12 @@ public class School {
     }
 
     public void addCourse(String name, String startDate, String endDate) throws ParseException {
+        Course course = new Course();
+        course.setName(name);
+        course.setStartDate(startDate);
+        course.setEndDate(endDate);
 
+        courseList.add(course);
     }
 
     public String getName() {
