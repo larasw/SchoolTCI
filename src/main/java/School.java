@@ -6,14 +6,13 @@ import java.util.Date;
 public class School {
     private String name;
     private Date date;
-    private ArrayList<Course> courseList;
+    private ArrayList<Course> courseList = new ArrayList<>();
 
     private final SimpleDateFormat DATE_FORMAT = new SimpleDateFormat("dd-MM-yyyy");
 
     public School() throws ParseException {
         this.name = "Fontys University";
         this.date = DATE_FORMAT.parse("01-01-2018");
-        courseList = new ArrayList<>();
     }
 
     public void addCourse(String name, String startDate, String endDate)
