@@ -64,7 +64,7 @@ public class School {
     }
 
     public ArrayList<Course> getListCourses() {
-        return null;
+        return courseList;
     }
 
     public int totalCourses(){
