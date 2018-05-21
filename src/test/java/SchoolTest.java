@@ -127,7 +127,7 @@ public class SchoolTest {
         School school = new School();
 
         // act
-        school.addCourse("Math", "31-12-2017", "31-12-2018");
+        school.addCourse("Math", "30-12-2017", "31-12-2018");
         int total = school.totalCourses();
 
         // assert

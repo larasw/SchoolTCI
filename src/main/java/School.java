@@ -12,18 +12,28 @@ public class School {
 
     public School() throws ParseException {
         this.name = "Fontys University";
-        this.date = DATE_FORMAT.parse("01-01-2018");
+        this.date = DATE_FORMAT.parse("31-12-2017");
     }
 
     public void addCourse(String name, String startDate, String endDate)
             throws ParseException, CourseException {
-        if(checkUniqueName(name) && checkCourseEndDate(startDate, endDate)) {
+        if(checkCourseStartDate(startDate) && checkUniqueName(name) && checkCourseEndDate(startDate, endDate)) {
             Course course = new Course();
             course.setName(name);
             course.setStartDate(startDate);
             course.setEndDate(endDate);
             courseList.add(course);
         }
+    }
+
+    private boolean checkCourseStartDate(String startDate)
+            throws CourseException, ParseException {
+        Date start = DATE_FORMAT.parse(startDate);
+        if(start.compareTo(date) > 0){
+            return true;
+        }
+        throw new CourseException("Course Start Date should be After School Begin Date",
+                new Throwable().getCause());
     }
 
     private boolean checkUniqueName(String name){
