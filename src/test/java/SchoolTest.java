@@ -56,7 +56,8 @@ public class SchoolTest {
         int courseAdded = school.totalCourses();
 
         // assert
-        Assert.assertEquals("course with end date before start date success to add",0, courseAdded);
+        Assert.assertEquals("course with end date before start date success to add",
+                0, courseAdded);
     }
 
     @Test
@@ -118,5 +119,19 @@ public class SchoolTest {
 
         // assert
         Assert.assertEquals("Cannot take list of courses", total, courseList.size());
+    }
+
+    @Test(expected = CourseException.class)
+    public void courseBeginAddSetBeforeSchoolBeginDate() throws ParseException, CourseException {
+        // arrange
+        School school = new School();
+
+        // act
+        school.addCourse("Math", "31-12-2017", "31-12-2018");
+        int total = school.totalCourses();
+
+        // assert
+        Assert.assertEquals("Course with start date before School begin date has successfully been added",
+                0, total);
     }
 }
