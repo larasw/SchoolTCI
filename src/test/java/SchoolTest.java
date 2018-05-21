@@ -3,6 +3,7 @@ import org.junit.Test;
 
 import java.text.ParseException;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Date;
 
 public class SchoolTest {
@@ -100,5 +101,22 @@ public class SchoolTest {
 
         // assert
         Assert.assertEquals("Cannot take list of course names", total, courseNames.length);
+    }
+
+    @Test
+    public void listOfAllCourses() throws ParseException, CourseException {
+        // arrange
+        School school = new School();
+
+        // act
+        school.addCourse("Math", "01-01-2018", "31-12-2018");
+        school.addCourse("Science", "01-01-2018", "31-12-2018");
+        school.addCourse("Biology", "01-01-2018", "31-12-2018");
+
+        ArrayList<Course> courseList = school.getListCourses();
+        int total = school.totalCourses();
+
+        // assert
+        Assert.assertEquals("Cannot take list of courses", total, courseList.size());
     }
 }

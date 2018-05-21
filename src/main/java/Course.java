@@ -14,6 +14,12 @@ public class Course {
         this.endDate = DATE_FORMAT.parse("02-01-2018");
     }
 
+    public Course(String name, String startDate, String endDate) throws ParseException {
+        this.name = name;
+        setStartDate(startDate);
+        setEndDate(endDate);
+    }
+
     public String getName() {
         return name;
     }

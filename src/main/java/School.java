@@ -63,6 +63,10 @@ public class School {
         return courseNames;
     }
 
+    public ArrayList<Course> getListCourses() {
+        return null;
+    }
+
     public int totalCourses(){
         return courseList.size();
     }
@@ -86,6 +90,4 @@ public class School {
             this.date = DATE_FORMAT.parse(String.valueOf(date));
         }
     }
-
-
 }
