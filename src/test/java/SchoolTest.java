@@ -3,7 +3,6 @@ import org.junit.Test;
 
 import java.text.ParseException;
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Date;
 
 public class SchoolTest {
@@ -71,7 +70,8 @@ public class SchoolTest {
         int courseAdded = school.totalCourses();
 
         // assert
-        Assert.assertEquals("Course with the same name has successfully been added",1, courseAdded);
+        Assert.assertEquals("Course with the same name has successfully been added",
+                1, courseAdded);
     }
 
     @Test
