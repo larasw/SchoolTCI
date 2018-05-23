@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="SchoolTest" tests="9" skipped="0" failures="0" errors="0" timestamp="2018-05-21T09:53:02" hostname="ACER-ASPIRE" time="0.034">
+  <properties/>
+  <testcase name="nameOfTheCourseMustBeUnique" classname="SchoolTest" time="0.003"/>
+  <testcase name="oneCourseAddedToSchool" classname="SchoolTest" time="0.004"/>
+  <testcase name="schoolDateNotNull" classname="SchoolTest" time="0.001"/>
+  <testcase name="getCourseByCourseName" classname="SchoolTest" time="0.003"/>
+  <testcase name="listOfAllCourses" classname="SchoolTest" time="0.008"/>
+  <testcase name="listOfCourseNames" classname="SchoolTest" time="0.003"/>
+  <testcase name="courseBeginAddSetBeforeSchoolBeginDate" classname="SchoolTest" time="0.001"/>
+  <testcase name="courseEndDateSetAfterBeginDate" classname="SchoolTest" time="0.001"/>
+  <testcase name="schoolNameNotNull" classname="SchoolTest" time="0.001"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

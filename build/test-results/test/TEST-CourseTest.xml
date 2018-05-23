@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="CourseTest" tests="3" skipped="0" failures="0" errors="0" timestamp="2018-05-21T09:53:02" hostname="ACER-ASPIRE" time="0.036">
+  <properties/>
+  <testcase name="courseEndDateCannotBeNull" classname="CourseTest" time="0.029"/>
+  <testcase name="courseNameCannotBeNull" classname="CourseTest" time="0.001"/>
+  <testcase name="courseStartDateCannotBeNull" classname="CourseTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
