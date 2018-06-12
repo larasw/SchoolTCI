@@ -1,9 +1,17 @@
+import org.assertj.core.api.Assertions;
+import org.hamcrest.MatcherAssert;
 import org.junit.Assert;
 import org.junit.Test;
 
 import java.text.ParseException;
 import java.util.ArrayList;
 import java.util.Date;
+
+import static org.hamcrest.MatcherAssert.assertThat;
+import static org.hamcrest.Matchers.*;
+import static org.assertj.core.api.Assertions.assertThat;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
 
 public class SchoolTest {
     @Test
@@ -16,7 +24,13 @@ public class SchoolTest {
         String schoolName = school.getName();
 
         // assert
-        Assert.assertNotNull("School Name is null", schoolName);
+        assertNotNull("School Name is null", schoolName);
+
+        // Hamcrest
+        assertThat(schoolName, is(notNullValue()));
+
+        // AssertJ
+        assertThat(schoolName).isNotNull();
     }
 
     @Test
@@ -29,7 +43,13 @@ public class SchoolTest {
         Date schoolDate = school.getDate();
 
         // assert
-        Assert.assertNotNull("School Date is null", schoolDate);
+        assertNotNull("School Date is null", schoolDate);
+
+        // Hamcrest
+        assertThat(schoolDate, is(notNullValue()));
+
+        // AssertJ
+        assertThat(schoolDate).isNotNull();
     }
 
     @Test
@@ -42,7 +62,13 @@ public class SchoolTest {
         int courseAdded = school.totalCourses();
 
         // assert
-        Assert.assertEquals("course failed to add",1, courseAdded);
+        assertEquals("course failed to add",1, courseAdded);
+
+        // Hamcrest
+        assertThat(courseAdded, is(equalTo(1)));
+
+        // AssertJ
+        assertThat(courseAdded).isEqualTo(1);
     }
 
     @Test(expected = CourseException.class)
@@ -55,8 +81,14 @@ public class SchoolTest {
         int courseAdded = school.totalCourses();
 
         // assert
-        Assert.assertEquals("course with end date before start date success to add",
+        assertEquals("course with end date before start date success to add",
                 0, courseAdded);
+
+        // Hamcrest
+        assertThat(courseAdded, is(equalTo(0)));
+
+        // AssertJ
+        assertThat(courseAdded).isEqualTo(0);
     }
 
     @Test
@@ -70,8 +102,14 @@ public class SchoolTest {
         int courseAdded = school.totalCourses();
 
         // assert
-        Assert.assertEquals("Course with the same name has successfully been added",
+        assertEquals("Course with the same name has successfully been added",
                 1, courseAdded);
+
+        // Hamcrest
+        assertThat(courseAdded, is(equalTo(1)));
+
+        // AssertJ
+        assertThat(courseAdded).isEqualTo(1);
     }
 
     @Test
@@ -84,7 +122,13 @@ public class SchoolTest {
         Course course = school.getCourseByName("Math");
 
         // assert
-        Assert.assertNotNull("Cannot take course by its name", course);
+        assertNotNull("Cannot take course by its name", course);
+
+        // Hamcrest
+        assertThat(course, is(notNullValue()));
+
+        // AssertJ
+        assertThat(course).isNotNull();
     }
 
     @Test
@@ -101,7 +145,13 @@ public class SchoolTest {
         int total = school.totalCourses();
 
         // assert
-        Assert.assertEquals("Cannot take list of course names", total, courseNames.length);
+        assertEquals("Cannot take list of course names", total, courseNames.length);
+
+        // Hamcrest
+        assertThat(courseNames.length, is(equalTo(total)));
+
+        // AssertJ
+        assertThat(courseNames.length).isEqualTo(total);
     }
 
     @Test
@@ -118,7 +168,13 @@ public class SchoolTest {
         int total = school.totalCourses();
 
         // assert
-        Assert.assertEquals("Cannot take list of courses", total, courseList.size());
+        assertEquals("Cannot take list of courses", total, courseList.size());
+
+        // Hamcrest
+        assertThat(courseList.size(), is(equalTo(total)));
+
+        // AssertJ
+        assertThat(courseList.size()).isEqualTo(total);
     }
 
     @Test(expected = CourseException.class)
@@ -131,7 +187,13 @@ public class SchoolTest {
         int total = school.totalCourses();
 
         // assert
-        Assert.assertEquals("Course with start date before School begin date has successfully been added",
+        assertEquals("Course with start date before School begin date has successfully been added",
                 0, total);
+
+        // Hamcrest
+        assertThat(total, is(equalTo(0)));
+
+        // AssertJ
+        assertThat(total).isEqualTo(0);
     }
 }
