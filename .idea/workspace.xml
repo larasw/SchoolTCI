@@ -2,11 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="6553614e-a562-41a4-8107-a410bfd5295f" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/Course.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/Course.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/production/classes/School.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/classes/School.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/classes/CourseTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/CourseTest.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/out/test/classes/SchoolTest.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/test/classes/SchoolTest.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/CourseTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/CourseTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
@@ -69,8 +64,8 @@
       <file leaf-file-name="CourseTest.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/CourseTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="578">
-              <caret line="67" column="46" selection-start-line="67" selection-start-column="46" selection-end-line="67" selection-end-column="46" />
+            <state relative-caret-position="289">
+              <caret line="24" column="18" lean-forward="true" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -652,7 +647,7 @@
       <workItem from="1527756330414" duration="361000" />
       <workItem from="1528828697917" duration="1458000" />
       <workItem from="1529072181356" duration="951000" />
-      <workItem from="1529076429491" duration="80000" />
+      <workItem from="1529076429491" duration="540000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1526671485908</created>
@@ -850,13 +845,17 @@
       <option name="project" value="LOCAL" />
       <updated>1529072530692</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="AssertJ Test on CourseTest">
+      <created>1529076549353</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1529076549353</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="School_[test] - 2018.05.21 at 11h 11m 01s.xml">
-      <configuration name="School [test]" configurationId="GradleRunConfiguration" />
-    </history-entry>
     <history-entry file="School_[test] - 2018.05.21 at 11h 11m 54s.xml">
       <configuration name="School [test]" configurationId="GradleRunConfiguration" />
     </history-entry>
@@ -884,9 +883,12 @@
     <history-entry file="CourseTest - 2018.06.15 at 16h 21m 52s.xml">
       <configuration name="CourseTest" configurationId="JUnit" />
     </history-entry>
+    <history-entry file="CourseTest - 2018.06.15 at 17h 28m 41s.xml">
+      <configuration name="CourseTest" configurationId="JUnit" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="28654000" />
+    <option name="totallyTimeSpent" value="29114000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
@@ -894,6 +896,7 @@
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" order="7" />
       <window_info anchor="right" id="Palette&#9;" order="3" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="3" />
@@ -914,7 +917,6 @@
       <window_info anchor="right" id="Theme Preview" order="3" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info id="Favorites" order="2" side_tool="true" />
-      <window_info anchor="bottom" id="Messages" order="7" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Build" order="7" weight="0.13793103" />
@@ -931,7 +933,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="GREEN - null test" />
     <MESSAGE value="REFACTOR - null test" />
     <MESSAGE value="RED - add course test" />
     <MESSAGE value="GREEN - add course test" />
@@ -956,7 +957,8 @@
     <MESSAGE value="REFACTOR - Course Start Date After School Begin Date Test" />
     <MESSAGE value="Hamcrest and AssertJ Test on SchoolTest" />
     <MESSAGE value="Hamcrest Test on CourseTest" />
-    <option name="LAST_COMMIT_MESSAGE" value="Hamcrest Test on CourseTest" />
+    <MESSAGE value="AssertJ Test on CourseTest" />
+    <option name="LAST_COMMIT_MESSAGE" value="AssertJ Test on CourseTest" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/src/test/java/SchoolTest.java">
@@ -1322,8 +1324,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/CourseTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="578">
-          <caret line="67" column="46" selection-start-line="67" selection-start-column="46" selection-end-line="67" selection-end-column="46" />
+        <state relative-caret-position="289">
+          <caret line="24" column="18" lean-forward="true" selection-start-line="24" selection-start-column="18" selection-end-line="24" selection-end-column="18" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>

@@ -22,7 +22,7 @@ public class CourseTest {
         String schoolName = course.getName();
 
         // assert
-        assertNull("Course Name is null", schoolName);
+        assertNotNull("Course Name is null", schoolName);
 
         // Hamcrest
         assertThat(schoolName, is(notNullValue()));
