@@ -1,8 +1,13 @@
-import org.junit.Assert;
+import org.junit.Assert.*;
 import org.junit.Test;
 
 import java.text.ParseException;
 import java.util.Date;
+
+import static org.hamcrest.core.Is.is;
+import static org.hamcrest.core.IsNull.notNullValue;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertThat;
 
 public class CourseTest {
     @Test
@@ -15,7 +20,10 @@ public class CourseTest {
         String schoolName = course.getName();
 
         // assert
-        Assert.assertNotNull("Course Name is null", schoolName);
+        assertNotNull("Course Name is null", schoolName);
+
+        // Hamcrest
+        assertThat(schoolName, is(notNullValue()));
     }
 
     @Test
@@ -28,7 +36,10 @@ public class CourseTest {
         Date schoolStartDate = course.getStartDate();
 
         // assert
-        Assert.assertNotNull("Course Start Date is null", schoolStartDate);
+        assertNotNull("Course Start Date is null", schoolStartDate);
+
+        // Hamcrest
+        assertThat(schoolStartDate, is(notNullValue()));
     }
 
     @Test
@@ -41,6 +52,9 @@ public class CourseTest {
         Date schoolEndDate = course.getEndDate();
 
         // assert
-        Assert.assertNotNull("Course Start Date is null", schoolEndDate);
+        assertNotNull("Course Start Date is null", schoolEndDate);
+
+        // Hamcrest
+        assertThat(schoolEndDate, is(notNullValue()));
     }
 }
