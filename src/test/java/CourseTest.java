@@ -8,6 +8,7 @@ import static org.hamcrest.core.Is.is;
 import static org.hamcrest.core.IsNull.notNullValue;
 import static org.junit.Assert.assertNotNull;
 import static org.junit.Assert.assertThat;
+import static org.assertj.core.api.Assertions.assertThat;
 
 public class CourseTest {
     @Test
@@ -24,6 +25,9 @@ public class CourseTest {
 
         // Hamcrest
         assertThat(schoolName, is(notNullValue()));
+
+        // AssertJ
+        assertThat(schoolName).isNotNull();
     }
 
     @Test
@@ -40,6 +44,9 @@ public class CourseTest {
 
         // Hamcrest
         assertThat(schoolStartDate, is(notNullValue()));
+
+        // AssertJ
+        assertThat(schoolStartDate).isNotNull();
     }
 
     @Test
@@ -56,5 +63,8 @@ public class CourseTest {
 
         // Hamcrest
         assertThat(schoolEndDate, is(notNullValue()));
+
+        // AssertJ
+        assertThat(schoolEndDate).isNotNull();
     }
 }
