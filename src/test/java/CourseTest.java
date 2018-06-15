@@ -7,6 +7,7 @@ import java.util.Date;
 import static org.hamcrest.core.Is.is;
 import static org.hamcrest.core.IsNull.notNullValue;
 import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertThat;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -21,7 +22,7 @@ public class CourseTest {
         String schoolName = course.getName();
 
         // assert
-        assertNotNull("Course Name is null", schoolName);
+        assertNull("Course Name is null", schoolName);
 
         // Hamcrest
         assertThat(schoolName, is(notNullValue()));
