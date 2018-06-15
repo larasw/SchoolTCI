@@ -28,7 +28,7 @@ public class CourseTest {
         assertThat(schoolName, is(notNullValue()));
 
         // AssertJ
-//        assertThat(schoolName).isNotNull();
+        assertThat(schoolName).isNotNull();
     }
 
     @Test
@@ -47,7 +47,7 @@ public class CourseTest {
         assertThat(schoolStartDate, is(notNullValue()));
 
         // AssertJ
-//        assertThat(schoolStartDate).isNotNull();
+        assertThat(schoolStartDate).isNotNull();
     }
 
     @Test
@@ -66,6 +66,6 @@ public class CourseTest {
         assertThat(schoolEndDate, is(notNullValue()));
 
         // AssertJ
-//        assertThat(schoolEndDate).isNotNull();
+        assertThat(schoolEndDate).isNotNull();
     }
 }
