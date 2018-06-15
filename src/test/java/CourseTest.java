@@ -7,7 +7,6 @@ import java.util.Date;
 import static org.hamcrest.core.Is.is;
 import static org.hamcrest.core.IsNull.notNullValue;
 import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertNull;
 import static org.junit.Assert.assertThat;
 import static org.assertj.core.api.Assertions.assertThat;
 
@@ -29,6 +28,8 @@ public class CourseTest {
 
         // AssertJ
         assertThat(schoolName).isNotNull();
+
+        // Comment, still trying Jenkins :)
     }
 
     @Test
